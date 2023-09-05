@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOFASHION - Home</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=Golos+Text&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Mobile Menu -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <!--- Inculde JavaScript -->
+    <script src="script.js" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+
+</head>
+<body>
+<main>
+    <header>
+        <div class="logo">
+          <a href="index.html">Tofashion</a>
+        </div>
+        
+        <nav id="main_menu">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="angebot.html">Angebot</a></li>
+            <li><a class="active" href="">Events</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+  
+        <a class="nav-burger" onclick="toggleMainNav()">
+  
+          <i class="burger-icon" data-feather="menu"></i>
+  
+          <i class="burger-icon hidden" data-feather="x"></i>
+  
+        </a>
+  
+        <a class="navigation_toggle" href=""><span class="nav_icon"></span></a>
+  
+      </header>
+
+    <div class="hero">
+        <section id="events-hero" class="hero-text">
+            <h1>Events</h1>
+            <h2>Unsere kommenden Ausstellungen</h2>
+        </section>
+    </div>
+
+    <section id="events-preview" class="event-preview">
+
+        <div class="event-cards">
+            <div class="event">
+                <h3>Datum</h3>
+                <h5>Zeit</h5>
+                <h4>Adresse</h4>
+            </div>
+            <div class="event">
+                <h3>Datum</h3>
+                <h5>Zeit</h5>
+                <h4>Adresse</h4>
+            </div>
+            <div class="event">
+                <h3>Datum</h3>
+                <h5>Zeit</h5>
+                <h4>Adresse</h4>
+            </div>
+        </div>
+    </section>
+
+    
+        
+    
+    
+
+    
+
+    <footer>
+        <div class="copyright-claim">
+            <p>© 2023 tofashion | Powered by tofashion</p>
+        </div>
+
+        <div>
+            <a href="">Datenschutz</a>
+            <a href="">Impressum</a>
+        </div>
+    </footer>
+    
+</body>
+<script>
+
+    // Replace icons with svg's
+
+    feather.replace();
+
+
+
+    function toggleMainNav() {
+
+        $('#main_menu').toggleClass('expanded');
+
+        $('.burger-icon').toggleClass('hidden');
+
+    };
+
+    // Responsive Nav toggle
+
+    $('.navigation_toggle').on('click', function (e) {
+
+        e.preventDefault(); // Link disable
+
+        $(this).parent().parent().toggleClass('open'); // toggle class "open"
+
+    });
+
+
+
+    // If Link in responsive navigation is clicked, remove open menu
+
+    $('nav a').each(function () {
+
+        $(this).on('click', function () {
+
+            $('body').removeClass('open');
+
+        });
+
+    });
+
+    
+
+</script>
+
+</html>
